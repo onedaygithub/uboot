@@ -1,0 +1,18 @@
+if TARGET_EMU_CTC5236
+
+config SYS_BOARD
+	default "emu_ctc5236"
+
+config SYS_VENDOR
+	default "centec"
+
+config SYS_SOC
+	default "ctc5236"
+
+config SYS_CONFIG_NAME
+	default "emu_ctc5236"
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+
+endif

@@ -1,0 +1,11 @@
+config ARCH_CTC5236
+	bool
+	select ARMV8_SET_SMPEN
+	select ARCH_EARLY_INIT_R
+	select BOARD_EARLY_INIT_F
+
+config CTC_SEC_BOOT
+	bool "centec secure boot"
+
+config CTC_SWITCH
+	bool "centec switch core"

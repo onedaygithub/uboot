@@ -1,0 +1,99 @@
+/*
+ * dts file for Centec CTC5236(TsingMa) SoC Veloce Board
+ *
+ * (C) Copyright 2004-2017 Centec Networks (suzhou) Co., LTD.
+ *
+ * Jay Cao <caoj@centecnetworks.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ */
+
+/dts-v1/;
+#include "ctc5236-vel.dtsi"
+
+/ {
+	model = " CTC5236(TsingMa) Veloce Board";
+	compatible = "ctc5236,ctc5236-vel";
+
+	memory {
+		device_type = "memory";
+		reg = <0 0x80000000 0 0x10000000>;
+	};
+
+	chosen {
+		stdout-path = "serial0:18750000n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+		spi0 = &spi;
+		spi1 = &qspi;
+		mmc0 = &sdhci;
+		usb0 = &ehci;
+		usb1 = &ohci;
+		ethernet0 = &enet0;
+		ethernet1 = &enet1;
+		i2c0 = &i2c0;
+		i2c1 = &i2c1;
+		pcie0 = &pcie;
+	};
+};
+
+&uart0 {
+        status = "okay";
+};
+
+&spi {
+        status = "okay";
+};
+
+&qspi {
+        status = "okay";
+};
+
+&sdhci {
+        status = "okay";
+};
+
+&ehci {
+	status = "okay";
+};
+
+&ohci {
+	status = "okay";
+};
+
+&enet0 {
+        status = "okay";
+        phy-connection-type = "mii";
+        auto-nego-mode = "disable";
+        fixed-link {
+			speed = <10>;
+			full-duplex;
+	};
+};
+
+&enet1 {
+        status = "okay";
+        phy-connection-type = "mii";
+        auto-nego-mode = "disable";
+        fixed-link {
+			speed = <10>;
+			full-duplex;
+	};
+};
+
+&i2c0 {
+        status = "okay";
+};
+
+&i2c1 {
+        status = "okay";
+};
+
+&pcie {
+        status = "okay";
+};

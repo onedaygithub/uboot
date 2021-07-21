@@ -1,0 +1,6 @@
+E530-24X2C
+M:      liuht <liuht@centecnetworks.com>
+S:      Maintained
+F:      board/centec/e530_24x2c
+F:      include/configs/e530_24x2c.h
+F:      configs/e530_24x_defconfig

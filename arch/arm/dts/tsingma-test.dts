@@ -1,0 +1,99 @@
+
+/dts-v1/;
+#include "ctc5236.dtsi"
+
+/ {
+	model = "CTC5236(TsingMa) Test Board";
+	compatible = "ctc5236,tsingma-test";
+
+	memory {
+		device_type = "memory";
+		reg = <0 0x80000000 0 0x40000000>;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+		spi0 = &spi;
+		spi1 = &qspi;
+		mmc0 = &sdhci;
+		usb0 = &ehci;
+		usb1 = &ohci;
+		ethernet0 = &enet0;
+		ethernet1 = &enet1;
+		i2c0 = &i2c0;
+		i2c1 = &i2c1;
+		pcie0 = &pcie;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+&qspi {
+	status = "okay";
+};
+
+&sdhci {
+	status = "okay";
+};
+
+&ehci {
+	status = "okay";
+};
+
+&ohci {
+	status = "okay";
+};
+
+&mdio {
+	status = "okay";
+			
+	phy0: ethernet-phy@0 {
+		index = <0x00>;
+		reg = <0x01>;
+	};
+	phy1: ethernet-phy@1 {
+		index = <0x01>;
+		reg = <0x00>;
+	};
+};
+
+&enet0 {
+	status = "disabled";
+	phy-handle = <&phy0>;
+	auto-nego-mode = "sgmii-mac";
+};
+
+&enet1 {
+	status = "okay";
+	phy-handle = <&phy1>;
+	auto-nego-mode = "sgmii-mac";
+};
+
+&i2c0 {
+        status = "okay";
+		rtc:rtc@32{
+			compatible = "rtc-sd2405";
+			reg = <0x32>;
+		};
+};
+
+&i2c1 {
+        status = "okay";
+};
+
+&gpio0 {
+        status = "okay";
+};
+&pwm {
+        status = "okay";
+};
+
+&sysreset {
+               status = "okay";
+};

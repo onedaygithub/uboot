@@ -1,0 +1,6 @@
+EMU-CTC5236
+M:      Jay Cao <caoj@centecnetworks.com>
+S:      Maintained
+F:      board/centec/emu_ctc5236
+F:      include/configs/emu_ctc5236.h
+F:      configs/emu_ctc5236_spl_defconfig

@@ -1,0 +1,6 @@
+E530-24X2C
+M:      liuht <liuht@centecnetworks.com>
+S:      Maintained
+F:      board/centec/tsingma_test
+F:      include/configs/tsingma_test.h
+F:      configs/tsingma_test_defconfig

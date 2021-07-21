@@ -1,0 +1,144 @@
+/*
+ * dts file for Centec CTC5236(TsingMa) SoC Emulation Board
+ *
+ * (C) Copyright 2004-2017 Centec Networks (suzhou) Co., LTD.
+ *
+ * Jay Cao <caoj@centecnetworks.com>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ */
+
+/dts-v1/;
+#include "ctc5236.dtsi"
+
+/ {
+	model = " CTC5236(TsingMa) E530-24X2C Board";
+	compatible = "ctc5236,e530-24x2c";
+
+	memory {
+		device_type = "memory";
+		reg = <0 0x80000000 0 0x80000000>;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+	aliases {
+		serial0 = &uart0;
+		serial1 = &uart1;
+		serial2 = &uart2;
+		spi0 = &spi;
+		spi1 = &qspi;
+		mmc0 = &sdhci;
+		usb0 = &ehci;
+		usb1 = &ohci;
+		ethernet0 = &enet0;
+		ethernet1 = &enet1;
+		i2c0 = &i2c0;
+		i2c1 = &i2c1;
+		pcie0 = &pcie;
+	};
+};
+
+&uart0 {
+	status = "okay";
+	clock = <20000000>;
+};
+
+&uart1 {
+	status = "okay";
+	clock = <20000000>;
+
+};
+
+&uart2 {
+	status = "okay";
+	clock = <20000000>;
+
+};
+
+&spi {
+	status = "okay";
+	
+	spiflash: n25q256@0 {
+		compatible = "spi-flash";
+		reg = <0>;		
+		pl022,interface = <0x0>; 		
+		spi-max-frequency = <25000000>;
+		spi-cpha; 
+		spi-cpol;
+	};
+};
+
+&qspi {
+	status = "okay";
+};
+
+&sdhci {
+	status = "okay";
+	max-frequency = <100000000>;
+};
+
+&ehci {
+	status = "okay";
+};
+
+&ohci {
+	status = "okay";
+};
+
+&mdio {
+	status = "okay";
+			
+	phy0: ethernet-phy@0 {
+		index = <0x00>;
+		reg = <0x01>;
+	};
+	phy1: ethernet-phy@1 {
+		index = <0x01>;
+		reg = <0x02>;
+	};
+};
+
+&enet0 {
+	status = "okay";
+	phy-handle = <&phy0>;
+	auto-nego-mode = "sgmii-mac";
+};
+
+&enet1 {
+	status = "okay";
+	phy-handle = <&phy1>;
+	auto-nego-mode = "sgmii-mac";
+};
+
+&i2c0 {
+        status = "okay";
+		rtc:rtc@32{
+			compatible = "rtc-sd2405";
+			reg = <0x32>;
+		};
+};
+
+&i2c1 {
+        status = "okay";
+};
+
+&pcie {
+        status = "okay";
+};
+
+&gpio0 {
+        status = "okay";
+};
+&pwm {
+        status = "okay";
+};
+
+&sysreset {
+               status = "okay";
+};

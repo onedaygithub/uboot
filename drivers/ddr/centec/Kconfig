@@ -1,0 +1,5 @@
+config SYS_CTC_DDR
+	bool "Centec DDR driver"
+	depends on ARCH_CTC5236
+	help
+	  Enable DDR interface for the DDR devices.

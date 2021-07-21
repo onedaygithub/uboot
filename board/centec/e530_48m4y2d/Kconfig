@@ -1,0 +1,18 @@
+if TARGET_E530_48M4Y2D
+
+config SYS_BOARD
+	default "e530_48m4y2d"
+
+config SYS_VENDOR
+	default "centec"
+
+config SYS_SOC
+	default "ctc5236"
+
+config SYS_CONFIG_NAME
+	default "e530_48m4y2d"
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+
+endif

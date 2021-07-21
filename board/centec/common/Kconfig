@@ -1,0 +1,7 @@
+config SYS_VENDOR
+	default "centec"
+
+config SYS_SOC
+	default "ctc5236"
+
+

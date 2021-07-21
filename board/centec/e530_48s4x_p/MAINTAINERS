@@ -1,0 +1,6 @@
+E530-48S4X-P
+M:      Wangyb <wangyb@centecnetworks.com>
+S:      Maintained
+F:      board/centec/e530_48s4x_p
+F:      include/configs/e530_48s4x_p.h
+F:      configs/e530_48s4x_p_defconfig

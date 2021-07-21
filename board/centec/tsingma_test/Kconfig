@@ -1,0 +1,18 @@
+if TARGET_TsingMa_Test
+
+config SYS_BOARD
+	default "tsingma_test"
+
+config SYS_VENDOR
+	default "centec"
+
+config SYS_SOC
+	default "ctc5236"
+
+config SYS_CONFIG_NAME
+	default "tsingma_test"
+
+config BOARD_SPECIFIC_OPTIONS # dummy
+	def_bool y
+
+endif

@@ -1,0 +1,6 @@
+E530-24X2C-P
+M:      Wangyb <wangyb@centecnetworks.com>
+S:      Maintained
+F:      board/centec/e530_24x2c_p
+F:      include/configs/e530_24x2c_p.h
+F:      configs/e530_24xc_p_defconfig

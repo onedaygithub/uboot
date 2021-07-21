@@ -1,0 +1,6 @@
+E530-48X
+M:      liuht <liuht@centecnetworks.com>
+S:      Maintained
+F:      board/centec/e530_48x
+F:      include/configs/e530_48x.h
+F:      configs/e530_48x_defconfig

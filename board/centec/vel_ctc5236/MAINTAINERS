@@ -1,0 +1,6 @@
+VEL-CTC5236
+M:      Jay Cao <caoj@centecnetworks.com>
+S:      Maintained
+F:      board/centec/vel_ctc5236
+F:      include/configs/vel_ctc5236.h
+F:      configs/vel_ctc5236_spl_defconfig
